@@ -15,13 +15,13 @@
 6. 백엔드 관련된 부분
 
 # TOPIC
-## 자료구조
-## 알고리즘
-## Python
-## JavaScript
-## DJANGO
-## FrontEnd
-## Docker
-## flask 
-## Vue
-## React
+### 자료구조
+### 알고리즘
+### Python
+### JavaScript
+### DJANGO
+### FrontEnd
+### Docker
+### flask 
+### Vue
+### React
