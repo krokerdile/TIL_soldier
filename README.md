@@ -7,9 +7,11 @@
 3. 어떤 내용이던(공부를 하려고 계획을 짰던, 공부를 했던, 리뷰를 했던 하나라도 정리해서 올려두기)
 
 # TOPIC
+
 ## 자료구조
 ## 알고리즘
 ## Python
+## Github
 ## JavaScript
 ## DJANGO
 ## FrontEnd
