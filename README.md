@@ -9,9 +9,11 @@
 # TOPIC
 
 ## 자료구조
+- [stack](https://github.com/krokerdile/TIL/blob/main/DataStructure/Stack.md)
 ## 알고리즘
 ## Python
 ## Github
+- [git 명령어 정리](https://github.com/krokerdile/TIL/blob/main/Github/github-command.md)
 ## JavaScript
 ## DJANGO
 ## FrontEnd
