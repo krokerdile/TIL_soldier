@@ -13,6 +13,7 @@
 - [stack](https://github.com/krokerdile/TIL/blob/main/DataStructure/Stack.md)
 ## 알고리즘
 ## Python
+- [python 기초](https://github.com/krokerdile/TIL/blob/main/python/python_basic.py)
 ## Github
 - [git 명령어 정리](https://github.com/krokerdile/TIL/blob/main/Github/github-command.md)
 ## JavaScript
