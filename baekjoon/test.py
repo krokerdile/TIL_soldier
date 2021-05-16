@@ -1,4 +1,2 @@
-print("\    /\\n")
-print(" )  ( ')\n")
-print("(  /  )\n")
-print(" \(__)|\n")
+for i in range(10):
+    print(i)
