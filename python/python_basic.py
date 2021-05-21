@@ -279,4 +279,128 @@
 # 1개의 값을 추가할 때는 add()를 여러개의 값을 동시에 추가할 때는 update를 사용하여 주면 되고
 # 다른 자료형과 마찬가지로 특정값을 제거할 때는 remove를 사용하여 주면 된다. 
 
+# 변수를 어떻게 만들까?
+# 변수를 만들 때는 "변수명" = (assignment)를 사용한다.
+# 파이썬은 c,java와는 달리 스스로 값을 판단하여 자료형을 지정하기 때문에 더 편리하다.
+
+# 파이썬에서 변수를 만들었을 때 
+# a = [1,2,3]
+# print(id(a)) 
+# 처럼 메모리 값을 id(*)를 통해서 확인 할 수 있습니다.
+
+# 만약 a=[1,2,3]이라는 리스트와 b=a 가 있다면 a와 b는 같은 것일 까?
+# a=[1,2,3]
+# b=a
+# print(id(a))
+# print(id(b))
+
+# 를 보면 알 수 있듯이 완전히 동일한 리스트를 a,b가 참조 하고 있음을 알 수 있습니다.
+# 그래서 만약 b변수를 생성했을 때 a 변수를 참조하면서 다른 주소를 가리키도록 하려면 어떻게 해야 할까?
+# 1. [:]이용
+# a=[1,2,3]
+# b=a[:]
+# a[1] = 4
+# print(a)
+# print(b)
+
+# 이런식으로 a 리스트안의 내용을 복사하여서 넘겨줄 수 있다.
+# 그리고 b=a[:]는 b=copy(a)와 동일합니다.
+# copy()를 사용하려면 from copy import copy를 사용하여 줘야 합니다.
+# 이렇게 하여주면 b is a 를 하였을 때는 False가 나오게 됩니다. 
+
+# if문
+# 조건문, 일어날 수도 있는 상황을 제어하여 주기 위해서는 if문을 사용하여 주어야 합니다.
+# money = True
+# if money:
+#     print("나는 돈이 있다.")
+# else: 
+#     print("나는 거지다")
+# 처럼 돈이 있는지 없는 지를 판단해주기 위해서 조건문을 사용하게 됩니다. 
+# 중요한 것은 if 조건문을 작성하여줄 때 반드시 : 콜론을 붙여 주어야 한다는 것 + 들여쓰기를 잘해야 하는 것
+# 다른 언어와 동일하게 or and not을 사용하고 다른언어와 달리 글자 그대로 붙여서 사용한다는 점이 차이 입니다.
+# 그리고 안에 있는지 없는 지를 in 과 not in을 통해서 확인을 하여 줄 수 있습니다.   
+
+# if 'a' in ('a','b','c'):
+#     print(True)
+
+# 이런식으로 적용을 할 수가 있다. 
+# 그리고 c언어에서 continue에 해당하는 기능을 pass를 통해서 사용할 수가 있다.
+
+# pocket = ['paper','money','cellphone']
+# if 'money' in pocket:
+#     pass
+# else:
+#     print("카드를 꺼내라")
+
+
+# for i in range(10):
+#     if i % 2 == 0:
+#         pass
+#         print(i)    
+#     else:
+#         print(i)
+# print("Done")
+
+# pass는 넘어가는 용도?
+# pass가 사용되는 경우는 1. 조건문에서 넣어줄 조건이 딱히 없을경우, 2. class 선언할 때, 초기에 넣어줄 값이 없을 때 정도로 생각할 수 있을 것 같습니다.
+# 일단 코드를 작성한 후 동작 확인을 위해서 실행할 때, 해당 부분에서 오류가 발생하지 않도록 하기위해 많이 사용한답니다. 라고 
+# https://chancoding.tistory.com/7 에서 설명을 해주고 있어서 일단 이렇게 이해를 하면 될 거 같습니다. 
+
+ 
+
+# for i in range(10):
+#     if i % 2 == 0:
+#         continue
+#         print(i)    
+#     print(i)
+# print("Done")
+
+# continue는 c언어에서 사용했던 것과 동일하게 그 밑의 단계를 넘어가주는 것으로 생각하여 주면 되고
+
+# for i in range(10):
+#     if i % 2 == 0:
+#         break
+#         print(i)    
+#     else:
+#         print(i)
+# print("Done")
+
+# break는 해당 조건이 만족하면 종료가 되는 것으로 동일하게 이해 하여 주면 됩니다.
+
+# pocket = ['paper','handphone']
+# card = True
+# if 'money' in pocket:
+#     print("택시를 타고가라")
+# else: 
+#     if card:
+#         print("택시를 타고가라")
+#     else: 
+#         print("걸어가라")
+
+# 로 적으면 전반적으로 코드가 붕 뜨는 것을 알 수 있다. 산만해져 보이고
+
+# 그래서 elif(타 언어에서는 else if로 쓰는 것을) 지원 하여 준다.
+
+# pocket = ['paper','cellphone']
+# card = True
+
+# if 'money' in pocket:
+#     print("택시를 타고가라")
+# elif card:
+#     print("택시를 타고가라")
+# else: 
+#     print("걸어가라")
+
+# c언어에서의 언어처럼 조건부로도 적을 수 있는데
+# score = 70
+# message = "success" if score >= 60 else "failure"
+
+# 조건 표현식을 조금이나마 자연스럽게 쓰는 방법은 지능형 리스트와 같이 활용하는 것입니다. 이외에는 실전에서 그렇게 많이 사용되지는 않습니다. 라고 (https://elvanov.com/1770) 블로그에서 말씀하신거 참고
+
+treeHit = 0
+while treeHit < 10:
+    treeHit = treeHit +1
+    print("나무를 %d번 찍었습니다." % treeHit)
+    if treeHit == 10:
+        print("나무 넘어갑니다.")
 
