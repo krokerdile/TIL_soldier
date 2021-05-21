@@ -397,10 +397,72 @@
 
 # 조건 표현식을 조금이나마 자연스럽게 쓰는 방법은 지능형 리스트와 같이 활용하는 것입니다. 이외에는 실전에서 그렇게 많이 사용되지는 않습니다. 라고 (https://elvanov.com/1770) 블로그에서 말씀하신거 참고
 
-treeHit = 0
-while treeHit < 10:
-    treeHit = treeHit +1
-    print("나무를 %d번 찍었습니다." % treeHit)
-    if treeHit == 10:
-        print("나무 넘어갑니다.")
+# treeHit = 0
+# while treeHit < 10:
+#     treeHit = treeHit +1
+#     print("나무를 %d번 찍었습니다." % treeHit)
+#     if treeHit == 10:
+#         print("나무 넘어갑니다.")
 
+# while문은 while문 옆에 있는 조건문을 만족 할 때까지 반복을 하게 해주는데
+# 조건에 들어갈 수 있는 경우는 다양하게 있습니다.
+
+# 예를 들어서 number != 4 도 조건에 넣어서 사용할 수 있습니다. 
+# prompt="""
+# 1. ADD
+# 2. DEL
+# 3. LIST
+# 4. QUIT
+# Enter number : """
+# number =0
+# while number !=4:
+#     print(prompt)
+#     number = int(input())
+
+# 그리고 강제로 while문을 중간에서 종료 해주고 싶다면 break를 통해서 종료를 시키면 된다. 
+
+# a=0
+# while a < 10: 
+#     a = a+1
+#     if a%2 == 0: continue
+#     print(a)
+        
+# for문
+# test_list = [1,2,3]
+# for i in test_list:
+#     print(i)
+
+# continue문을 for문에서도 사용하여 줄 수 있는데 여기서도 continue를 만나면 for문의 맨 처음으로 돌아가게 된다. 
+
+# 그리고 in과 함께 range()를 자주 함께 사용하는데
+# a = range(0,10)
+# for i in a:
+#     print(i)
+# 런 식으로 사용해주면 0에서 부터 10미만 까지의 값을 가지고 있는 range 객체를 만들어 주는 것이다. 
+
+# 파이썬 함수
+
+# def 함수명(매개변수):
+    # 문장
+#     실행할 문장
+
+# def add(a,b):
+#     return a+b
+
+# print(add(1,2))
+
+# 처럼 작성을 하여서 만들어 줄 수 있고, 여기서 return은 결과값을 돌려주는 명령어 입니다. 
+# 입력값이 없는(인수가 없는 함수)도 존재할 수 있으며, 결과 값이 없는 함수 또한 존재 할 수도 있습니다. 
+# def add(a, b): 
+#     print("%d, %d의 합은 %d입니다." % (a, b, a+b))
+
+# 처럼 결과값 없이 그대로 출력하여 주는데 사용하여 주기도 합니다. 
+
+# def add_many(*args): 
+#     result = 0 
+#     for i in args: 
+#          result = result + i 
+#     return result 
+ 
+# result = add_many(1,2,3,4,5)
+# print(result)
