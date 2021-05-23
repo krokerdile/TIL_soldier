@@ -432,7 +432,7 @@
 # for i in test_list:
 #     print(i)
 
-# continue문을 for문에서도 사용하여 줄 수 있는데 여기서도 continue를 만나면 for문의 맨 처음으로 돌아가게 된다. 
+# continue문을 for문에서도 사용하여 줄 수 있는데 여기서도 continue를 만나면 for문의 맨 처음으로 돌아가게 된다.
 
 # 그리고 in과 함께 range()를 자주 함께 사용하는데
 # a = range(0,10)
@@ -466,3 +466,92 @@
  
 # result = add_many(1,2,3,4,5)
 # print(result)
+
+# 사용자의 입력
+# a=input()
+# print(a)
+
+# number = input("숫자를 입력하세요")
+# print(number)
+
+# print("life""is""too short")
+
+# print("life","is","too short")
+# 쉼표 한개는 띄어쓰기가 되는데 두개는 안된다는 점 
+
+# for i in range(10):
+#     print(i,end='\n')
+
+# 끝문자를 위의 경우 처럼 지정하여 줄 수 있다는 점
+
+# 클래스
+
+# 자바에서 배웠던 개념이지만 여전히 좀 헷갈리는?
+
+# result1 = 0
+# result2 = 0
+
+# def add1(num):
+#     global result1
+#     result1 += num
+#     return result1
+
+# def add2(num):
+#     global result2
+#     result2 += num
+#     return result2
+
+# print(add1(3))
+# print(add1(4))
+# print(add2(3))
+# print(add2(7))
+
+# 동일한 역할을 해줄 수 있는 객체를 만들어주는 것이 클래스?
+# 대신에 각각의 객체는 서로에게 전혀 영향을 주지 않는다는 점?
+
+# 그래서 클래스를 쿠키틀에 비유하고 객체를 쿠키에 비교하는 거
+# A라는 클래스에 의해 만들어진 B 객체는 A의 인스턴스라고 할 수 있다는 점
+
+# class FourCal():
+#     def __init__(self, ):
+#         self.result=0
+        
+#     def setdata(self, first, second):
+#         self.first = first
+#         self.second = second
+        
+#     def add(self):
+#         self.result = self.first + self.second
+#         return self.result
+    
+# a = FourCal()
+# a.setdata(1,2)
+# print(a.add())
+
+#  def __init__(self, ):
+        # self.result=0
+    
+# 여기서 self는 클래스를 통해서 생성되어지는 객체를 이야기 하고 
+# 만약 그 뒤에 (self, first, second)를 넣고 
+# self.first = first를 넣게 된다면 
+# 클래스를 통해서 만들어진 객체에 변수를 더해주는 것이기 때문에 객체 변수가 생성되어 진다.
+# 그리고 __init__은 객체를 만들어줄 때 처음에 자동으로 생성자로 인식되어 객체가 생성되는 시점에 자동으로 호출되어진다.
+
+# 클래스를 상속시키고 싶다면 class MoreFourCal(FourCal) 이런식으로 작성을 하여주면 상속을 시켜줄 수 있다.
+# 상속을 시켜주는 이유는 
+# 1. 기존 클래스를 변경하지 않고 기능을 추가한 클래스가 필요해서
+# 2. 기존 기능을 변경하여 주기 위해서 
+# >>> class SafeFourCal(FourCal):
+# ...     def div(self):
+# ...         if self.second == 0:  # 나누는 값이 0인 경우 0을 리턴하도록 수정
+# ...             return 0
+# ...         else:
+# ...             return self.first / self.second
+
+# 그리고 기존 기능을 변경 하여 주기 위해서 메서드 오버라이딩을 사용할 수도 있다.
+# 그리고 객체 변수가 있었듯이 클래스에도 변수가 있다.
+class Family:
+    lastname = "김"
+    
+print(Family.lastname)
+
