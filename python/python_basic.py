@@ -550,8 +550,10 @@
 
 # 그리고 기존 기능을 변경 하여 주기 위해서 메서드 오버라이딩을 사용할 수도 있다.
 # 그리고 객체 변수가 있었듯이 클래스에도 변수가 있다.
-class Family:
-    lastname = "김"
+# class Family:
+#     lastname = "김"
     
-print(Family.lastname)
+# print(Family.lastname)
+
+# 이런 식으로 클래스에도 자체적으로 클래스 변수를 만들어 줄 수가 있다. 
 
